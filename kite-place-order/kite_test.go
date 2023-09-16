@@ -7,14 +7,14 @@ import (
 )
 
 var kite = &Kite{
-	Token:   "enctoken <YOURTOKEN>",
+	Token:   "enctoken QeQ/ThBVPPw/I4yE6cEz0BFEXXPZH+oy88SnYh7oF2/HKXj6+X87uFJXLmK1012EZfM2Qj1E4gol3YEdhFFkVHBD/FPAJBVV/1Ic3N4Yg3hQqbtL1lzEcQ==",
 	BaseUrl: "https://kite.zerodha.com",
 }
 
 func TestPlaceOrderInKite(t *testing.T) {
 	response, err := kite.PlaceOrderInKite(&KiteOrderPayload{
 		Exchange:          "NFO",
-		TradingSymbol:     "NIFTY2391420000CE",
+		TradingSymbol:     "NIFTY2392120000PE",
 		TransactionType:   "BUY",
 		Product:           "NRML",
 		Quantity:          "250",
@@ -38,7 +38,7 @@ func BenchmarkPlaceOrderInKite(b *testing.B) {
 	for i := 0; i < b.N; i++ {
 		kite.PlaceOrderInKite(&KiteOrderPayload{
 			Exchange:          "NFO",
-			TradingSymbol:     "NIFTY2391420000CE",
+			TradingSymbol:     "NIFTY2392120000PE",
 			TransactionType:   "BUY",
 			Product:           "NRML",
 			Quantity:          "250",

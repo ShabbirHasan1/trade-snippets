@@ -70,7 +70,7 @@ func (kite *Kite) PlaceOrderInKite(kOrder *KiteOrderPayload) (*KiteResponsePaylo
 }
 
 func (kite *Kite) GetLastPrice(exchange string, tradingSymbol string) (float64, error) {
-	url := kite.BaseUrl + "oms/quote?i=" + exchange + ":" + tradingSymbol
+	url := kite.BaseUrl + "/oms/quote?i=" + exchange + ":" + tradingSymbol
 	headers := make(map[string]string)
 	headers["authorization"] = kite.Token
 	headers["content-type"] = "application/x-www-form-urlencoded"
